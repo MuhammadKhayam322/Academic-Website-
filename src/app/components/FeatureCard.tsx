@@ -8,14 +8,24 @@ type FeatureCardProps = {
 
 const FeatureCard: React.FC<FeatureCardProps> = ({ icon, title, description }) => {
   return (
-    <div className=' py-8 flex justify-center items-center shadow-7xl'>
-    <div className='relative w-[504px] h-[306px] border-2 rounded-3xl '>
-      <img className='mt-[-40px] ml-[40px] w-[80px] absolute' src={icon} alt="icon" />
-      <h1 className='mt-20 ml-10 text-[22px] font-bold'>{title}</h1>
-      <p className='flex justify-center items-center w-[320px] ml-10'>{description}</p>
-    </div>
+    <div className="py-8 flex justify-center items-center">
+      <div className="relative w-full max-w-md md:max-w-lg lg:max-w-lg px-12 py-18 border-2 rounded-3xl shadow-md ">
+        {/* Icon */}
+        <div className="absolute -top-10 left-10 w-20 h-20">
+          <img src={icon} alt="icon" className="w-full h-full object-contain" />
+        </div>
+
+        {/* Title */}
+        <h1 className="mt-12 text-xl md:text-2xl font-bold ml-2">{title}</h1>
+
+        {/* Description */}
+        <p className="mt-4 ml-2 text-sm md:text-base max-w-[90%]">
+          {description}
+        </p>
+      </div>
     </div>
   );
 };
 
 export default FeatureCard;
+

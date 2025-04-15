@@ -6,7 +6,7 @@ const features = [
     icon: '/icon.png',
     title: 'Holistic Learning Approach',
     description:
-      'Our curriculum focuses on nurturing cognitive, social, emotional, and physical development, ensuring a well-rounded education.',
+      'Our curriculum focuses on nurturing cognitive, social,  ensuring a well-rounded education.',
   },
   {
     icon: '/icon1.png',

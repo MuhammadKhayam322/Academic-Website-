@@ -2,134 +2,124 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import FeatureSection from './component/FeatureSection';
-import TestimonialSection from './component/TestimonialSection';
+import TestimonialScroller from './component/TestimonialScroller';
+import FAQSection from './component/FAQSection';
+
 function Page() {
   return (
-    <div className="relative min-h-screen">
-      {/* Background Grid (vertical stripes) */}
-      <div className="absolute inset-0 z-0 grid grid-cols-50 min-h-screen ">
- <div className="bg-red-100 col-span-2 h-full"></div>
-  <div className="bg-white col-span-1 h-full"></div>
-  <div className="bg-red-100 col-span-2 h-full"></div>
-  <div className="bg-white col-span-1 h-full"></div>
-  <div className="bg-red-100 col-span-2 h-full"></div>
-  <div className="bg-white col-span-1 h-full"></div>
-  <div className="bg-red-100 col-span-2 h-full"></div>
-  <div className="bg-white col-span-1 h-full"></div>
-  <div className="bg-red-100 col-span-2 h-full"></div>
-  <div className="bg-white col-span-1 h-full"></div>
-  <div className="bg-red-100 col-span-2 h-full"></div>
-  <div className="bg-white col-span-1 h-full"></div>
-  <div className="bg-red-100 col-span-2 h-full"></div>
-  <div className="bg-white col-span-1 h-full"></div>
-  <div className="bg-red-100 col-span-2 h-full"></div>
-  <div className="bg-white col-span-1 h-full"></div>
-  <div className="bg-red-100 col-span-2 h-full"></div>
-  <div className="bg-white col-span-1 h-full"></div>
-  <div className="bg-red-100 col-span-2 h-full"></div>
-  <div className="bg-white col-span-1 h-full"></div>
-  <div className="bg-red-100 col-span-2 h-full"></div>
-  <div className="bg-white col-span-1 h-full"></div>
-  <div className="bg-red-100 col-span-2 h-full"></div>
-  <div className="bg-white col-span-1 h-full"></div>
-  <div className="bg-red-100 col-span-2 h-full"></div>
-  <div className="bg-white col-span-1 h-full"></div>
-  <div className="bg-red-100 col-span-2 h-full"></div>
-  <div className="bg-white col-span-1 h-full"></div>
-  <div className="bg-red-100 col-span-2 h-full"></div>
-  <div className="bg-white col-span-1 h-full"></div>
-  <div className="bg-red-100 col-span-2 h-full"></div>
-  <div className="bg-white col-span-1 h-full"></div>
-  <div className="bg-red-100 col-span-2 h-full"></div>
-  
-  </div>
+    <div className="relative min-h-screen overflow-hidden">
+      {/* Fixed Background Grid */}
+      <div className="fixed inset-0 z-0 grid grid-cols-24">
+        {Array.from({ length: 24 }, (_, i) => (
+          <div
+            key={i}
+            className={`h-full ${i % 2 === 0 ? 'bg-red-100' : 'bg-white'}`}
+          />
+        ))}
+      </div>
 
       {/* Foreground Content */}
-      <div className="relative z-10">
+      <div className="relative z-10 flex flex-col items-center px-4 sm:px-6 lg:px-8">
         {/* Banner */}
-        <div>
-          <Image src="/baner.png" alt="baner" width={1840} height={200} />
+        <div className="w-full min-w-screen-mxl mt-4">
+          <Image
+            src="/baner.png"
+            alt="banner"
+            width={1840}
+            height={200}
+            className="w-full h-auto"
+          />
         </div>
 
         {/* Navigation */}
-        <nav className="flex items-center justify-between shadow border-2 backdrop-blur-sm">
-          {/* Logo */}
+        <nav className="w-full max-w-screen-mxl mt-4 flex flex-col md:flex-row items-center justify-between  border rounded shadow  ">
           <Link href="/">
-            <Image src="/image.png" alt="banner" width={242} height={100} />
+            <Image src="/image.png" alt="logo" width={180} height={120} />
           </Link>
-
-          {/* Navigation Links */}
-          <ul className="flex">
-            <li className="border-2 p-7"><Link href="/">Home</Link></li>
-            <li className="border-2 p-7"><Link href="/about">About Us</Link></li>
-            <li className="border-2 p-7"><Link href="/academics">Academics</Link></li>
-            <li className="border-2 p-7"><Link href="/admissions">Admissions</Link></li>
-            <li className="border-2 p-7"><Link href="/student-life">Student Life</Link></li>
-            <li className="border-2 p-7"><Link href="/contact">Contact</Link></li>
+          <ul className="flex flex-wrap justify-center md:justify-end  mt-4 md:mt-0">
+            {[
+              ['Home', '/'],
+              ['About Us', '/about'],
+              ['Academics', '/academics'],
+              ['Admissions', '/admissions'],
+              ['Student Life', '/student-life'],
+              ['Contact', '/contact'],
+            ].map(([text, link]) => (
+              <li key={link} className="px-4 py-5 border rounded">
+                <Link href={link}>{text}</Link>
+              </li>
+            ))}
           </ul>
         </nav>
-      </div>
-  <div className="grid grid-cols-3 gap-0">
-  {/* Column 1 - White */}
 
-  {/* Column 2 - Pink (with Image centered) */}
-  <div className="absolute  flex justify-center items-start">
-    <Image
-      src="/compo.png"
-      alt="banner"
-      width={615}
-      height={85}
-      className="mt-20 ml-27 bg-orange-400 opacity-50"
-     
-    />
-    
-     <Image
-      src="/Design.png"
-      alt="banner"
-      width={485}
-      height={85}
-      className="mt-20 ml-27 absolute"
-      
-    />
-  </div>
+        {/* Images side-by-side (centered row) */}
+        <div className="relative mt-16 flex flex-col lg:flex-row items-center justify-center gap-8 w-full max-w-screen-mxl">
+          {/* Compo with overlay design */}
+          <div className="relative">
+            <Image
+              src="/compo.png"
+              alt="compo"
+              width={615}
+              height={85}
+              className="w-full max-w-mxl opacity-50 bg-orange-400"
+            />
+            <Image
+              src="/Design.png"
+              alt="design"
+              width={485}
+              height={85}
+              className="absolute md:w-150 sm:w-100  xsm:w-100  top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+            />
+          </div>
 
-</div>
-<div className="absolute  flex justify-center items-start">
-<Image
-      src="/compo2.png"
-      alt="banner"
-      width={765}
-      height={500}
-      className="mt-35 ml-197"
-     
-    />
-   </div>
-
-<div className='relative border w-80 flex justify-center items-center mt-200 ml-180'>
-      <h1 className='text-black'>Children Deserve Bright Future</h1>
-      </div>
-      <div className='relative  w-80 flex justify-center items-center  ml-180 text-[50px]'> 
-        <h2>Our Benefits</h2>
+          {/* Compo2 */}
+          <Image
+            src="/compo2.png"
+            alt="compo2"
+            width={765}
+            height={500}
+            className="w-full max-w-xl"
+          />
         </div>
-        <div className='relative w-[772px] h-[60px] flex justify-end items-center ml-130'>
-  <p className='text-center'>With a dedicated team of experienced educators, state-of-the-art facilities, and a comprehensive curriculum, we aim to lay a strong foundation for your child's future.</p>
-</div>
- 
-    <FeatureSection />
-     <div className='relative w-[222px] rounded-2xl h-[30px] border-2 flex justify-center items-center ml-197 mt-20 p-5'>
-      <h1 className='flex justify-center item-center'>Their Happy Words 🤗</h1>
-     </div>
-     <div className='relative w-[822px] rounded-2xl h-[130px]  flex justify-center items-center ml-127 mt-10 '>
-      <h1 className='text-[60px] font-bold'>Our Testimonials</h1>
-    </div>
-   <div className='relative w-[822px] rounded-2xl h-[130px]  flex justify-center items-center ml-127  '>
-    <p className='text-center font-medium text-10'>Our testimonials are heartfelt reflections of the nurturing environment we provide, where children flourish both academically and emotionally.</p>
-   </div>
-   <div>
-    <TestimonialSection />
-   </div>
+
+        {/* Headline and Description */}
+        <div className="mt-16 text-center">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black">
+            Children Deserve Bright Future
+          </h1>
+          <h2 className="text-xl sm:text-2xl mt-4 font-semibold">Our Benefits</h2>
+          <p className="mt-2 max-w-xl mx-auto text-base">
+            With a dedicated team of experienced educators, state-of-the-art facilities, and a comprehensive curriculum, we aim to lay a strong foundation for your child's future.
+          </p>
+        </div>
+
+        {/* Feature Section */}
+        <div className="mt-16 w-full">
+          <FeatureSection />
+        </div>
+
+        {/* Testimonial Section */}
+        <div className="mt-20 text-center">
+          <div className="inline-block px-6 py-2 border-2 rounded-2xl mb-4 text-lg">
+            Their Happy Words 🤗
+          </div>
+          <h1 className="text-4xl font-bold">Our Testimonials</h1>
+          <p className="mt-4 text-base max-w-2xl mx-auto">
+            Our testimonials are heartfelt reflections of the nurturing environment we provide, where children flourish both academically and emotionally.
+          </p>
+        </div>
+
+        <div className="mt-10 w-full ">
+          <TestimonialScroller />
+        </div>
+
+        <div className="mt-16 w-full max-w-screen-lg">
+          <FAQSection />
+        </div>
+      </div>
     </div>
   );
 }
 
 export default Page;
+
