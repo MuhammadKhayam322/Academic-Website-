@@ -21,11 +21,12 @@ const features = [
       'We prioritize safety and provide a warm and caring atmosphere for every child.',
   },
   {
-    icon: '/icon3.png'
+    icon: '/icon3.png', // ← comma added here!
     title: 'Play-Based Learning',
     description:
       'We believe in the power of play to foster creativity, problem-solving skills, and imagination.',
   },
+  
   {
     icon: '/icon4.png',
     title: 'Individualized Attention',

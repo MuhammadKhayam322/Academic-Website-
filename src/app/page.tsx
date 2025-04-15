@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import FeatureSection from './component/FeatureSection';
+import TestimonialSection from './component/TestimonialSection';
 function Page() {
   return (
     <div className="relative min-h-screen">
@@ -118,10 +119,15 @@ function Page() {
      <div className='relative w-[222px] rounded-2xl h-[30px] border-2 flex justify-center items-center ml-197 mt-20 p-5'>
       <h1 className='flex justify-center item-center'>Their Happy Words 🤗</h1>
      </div>
-     <div className='relative w-[822px] rounded-2xl h-[130px]  flex justify-center items-center ml-127 mt-20 '>
+     <div className='relative w-[822px] rounded-2xl h-[130px]  flex justify-center items-center ml-127 mt-10 '>
       <h1 className='text-[60px] font-bold'>Our Testimonials</h1>
     </div>
-   
+   <div className='relative w-[822px] rounded-2xl h-[130px]  flex justify-center items-center ml-127  '>
+    <p className='text-center font-medium text-10'>Our testimonials are heartfelt reflections of the nurturing environment we provide, where children flourish both academically and emotionally.</p>
+   </div>
+   <div>
+    <TestimonialSection />
+   </div>
     </div>
   );
 }
