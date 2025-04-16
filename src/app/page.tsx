@@ -4,19 +4,14 @@ import Link from 'next/link';
 import FeatureSection from './component/FeatureSection';
 import TestimonialScroller from './component/TestimonialScroller';
 import FAQSection from './component/FAQSection';
+import AboutSection from './component/AboutSection';
+import AboutPage from './component/AboutPage';
 
 function Page() {
   return (
-    <div className="relative min-h-screen overflow-hidden">
+    <div className="relative min-h-screen overflow-hidden bg-pink-100">
       {/* Fixed Background Grid */}
-      <div className="fixed inset-0 z-0 grid grid-cols-24">
-        {Array.from({ length: 24 }, (_, i) => (
-          <div
-            key={i}
-            className={`h-full ${i % 2 === 0 ? 'bg-red-100' : 'bg-white'}`}
-          />
-        ))}
-      </div>
+      
 
       {/* Foreground Content */}
       <div className="relative z-10 flex flex-col items-center px-4 sm:px-6 lg:px-8">
@@ -117,6 +112,22 @@ function Page() {
           <FAQSection />
         </div>
       </div>
+      <div className='flex justify-center items-center mt-10'>
+      <div className='flex justify-center item-center relative w-[227px] h-[37px] py-2 border rounded-2xl'>
+        <h1>Explore More</h1>
+      </div>
+    
+      </div>
+      <div className='flex justify-center item-center relative mt-10'>
+        <h1 className='text-[50px] font-bold'>Navigate through our Pages</h1>
+        </div>
+        <div className='flex justify-center item-center relative mt-10'>
+        <div className='flex justify-center item-center  w-[820px] h-[200px]'>
+        <p className='text-center'>Your gateway to discovering a wealth of valuable information about our kindergarten school, Feel free to explore and learn more about the enriching experiences that await your child at our kindergarten school</p>
+        </div>
+        </div>
+        <AboutPage/>
+
     </div>
   );
 }

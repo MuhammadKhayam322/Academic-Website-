@@ -8,7 +8,7 @@ const TestimonialScroller = () => {
   const scroll = (direction: 'left' | 'right') => {
     if (scrollRef.current) {
       scrollRef.current.scrollBy({
-        left: direction === 'left' ? -300 : 300, // adjust scroll distance
+        left: direction === 'left' ? -440 : 440, // adjust scroll distance
         behavior: 'smooth',
       });
     }
@@ -19,13 +19,13 @@ const TestimonialScroller = () => {
       {/* Scroll Buttons */}
       <button
         onClick={() => scroll('left')}
-        className="absolute left-4 top-1/2 z-10 -translate-y-1/2 bg-white rounded-full shadow p-2 md:block hidden"
+        className="absolute left-4 top-1/2 z-10 -translate-y-1/2 bg-white rounded-full shadow p-2 "
       >
         ◀
       </button>
       <button
         onClick={() => scroll('right')}
-        className="absolute right-4 top-1/2 z-10 -translate-y-1/2 bg-white rounded-full shadow p-2 md:block hidden"
+        className="absolute right-4 top-1/2 z-10 -translate-y-1/2 bg-white rounded-full shadow p-2 "
       >
         ▶
       </button>
@@ -33,7 +33,7 @@ const TestimonialScroller = () => {
       {/* Scrollable testimonials */}
       <div
         ref={scrollRef}
-        className="flex gap-6 overflow-x-scroll scroll-smooth px-4 pb-4 md:px-10 scrollbar-hide"
+        className="flex gap-6 overflow-auto scroll-smooth px-4 pb-4 md:px-10 scrollbar-hide"
       >
         <TestimonialCard
           name="Jennifer B"
