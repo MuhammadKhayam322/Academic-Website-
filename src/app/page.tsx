@@ -126,7 +126,9 @@ function Page() {
         <p className='text-center'>Your gateway to discovering a wealth of valuable information about our kindergarten school, Feel free to explore and learn more about the enriching experiences that await your child at our kindergarten school</p>
         </div>
         </div>
-        <AboutPage/>
+        <div className='flex justify-center item-center relative gap-20 '> 
+          <AboutPage/></div>
+       
 
     </div>
   );
