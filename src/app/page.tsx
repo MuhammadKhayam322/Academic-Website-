@@ -26,8 +26,7 @@ function Page() {
           />
         </div>
 
-        {/* Navigation */}
-        <nav className="w-full max-w-screen-mxl mt-4 flex flex-col md:flex-row items-center justify-between  border rounded shadow  ">
+      <nav className="w-full max-w-screen-mxl mt-4 flex flex-col md:flex-row items-center justify-between  border rounded shadow  ">
           <Link href="/">
             <Image src="/image.png" alt="logo" width={180} height={120} />
           </Link>
