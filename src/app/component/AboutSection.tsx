@@ -25,15 +25,16 @@ const AboutSection: React.FC<AboutSectionProps> = ({
           </h1>
 
           <div className="mt-28 px-4 md:px-10">
-            <div className="w-full flex justify-center mb-6">
-              <Image
-                src={lineImage}
-                alt="line"
-                width={400}
-                height={40}
-                className="max-w-[400px] h-auto"
-              />
-            </div>
+          <div className="w-full flex justify-center mb-6">
+  <Image
+    src={lineImage}
+    alt="line"
+    width={400}
+    height={40}
+    className="w-full max-w-[400px] h-auto sm:max-w-[200px]"
+  />
+</div>
+
 
             <div className="mt-6 text-center md:text-left">
               <p className="text-base max-w-[970px] md:text-lg">{description}</p>
