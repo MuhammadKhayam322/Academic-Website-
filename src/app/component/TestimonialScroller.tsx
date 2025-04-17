@@ -8,7 +8,7 @@ const TestimonialScroller = () => {
   const scroll = (direction: 'left' | 'right') => {
     if (scrollRef.current) {
       scrollRef.current.scrollBy({
-        left: direction === 'left' ? -440 : 440, // adjust scroll distance
+        left: direction === 'left' ? -360 : 360, // adjust scroll distance
         behavior: 'smooth',
       });
     }

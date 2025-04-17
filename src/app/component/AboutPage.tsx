@@ -15,7 +15,7 @@ const AboutPage: React.FC = () => {
         title="Academics"
         lineImage="/line.png"
         description="Meet our passionate educators who bring years of expertise and love for teaching into every classroom."
-        buttonText="Meet Team"
+        buttonText="Learn More"
         buttonIcon="/arow.png"
       />
       <AboutSection
@@ -29,7 +29,7 @@ const AboutPage: React.FC = () => {
         title="Admission"
         lineImage="/line.png"
         description="Meet our passionate educators who bring years of expertise and love for teaching into every classroom."
-        buttonText="Meet Team"
+        buttonText="Learn More"
         buttonIcon="/arow.png"
       />
     </div>

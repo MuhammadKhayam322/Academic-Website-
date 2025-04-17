@@ -17,7 +17,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({
 }) => {
   return (
     <div className="flex justify-center items-center h-auto px-6">
-      <div className="flex flex-col justify-center relative mt-10 border rounded-2xl w-full max-w-[553px] h-auto md:h-[538px] bg-white shadow-md ">
+      <div className="flex flex-col justify-center relative mt-10 border rounded-2xl w-full max-w-[553px] h-auto md:h-[538px] bg-white shadow-md  border-b-4 border-r-4 ">
         <div className="w-full">
           <h1 className="text-3xl md:text-4xl font-bold absolute top-8 left-1/2 transform -translate-x-1/2 text-center">
             {title}

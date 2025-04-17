@@ -4,7 +4,7 @@ import Link from 'next/link';
 import FeatureSection from './component/FeatureSection';
 import TestimonialScroller from './component/TestimonialScroller';
 import FAQSection from './component/FAQSection';
-import AboutSection from './component/AboutSection';
+import Footer from './component/Footer';
 import AboutPage from './component/AboutPage';
 
 function Page() {
@@ -118,9 +118,12 @@ function Page() {
       </div>
     
       </div>
-      <div className='flex justify-center item-center relative mt-10'>
-        <h1 className='text-[50px] font-bold'>Navigate through our Pages</h1>
-        </div>
+      <div className="flex justify-center items-center relative mt-10 px-4">
+  <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center">
+    Navigate through our Pages
+  </h1>
+</div>
+
         <div className='flex justify-center item-center relative mt-10'>
         <div className='flex justify-center item-center  w-[820px] h-[200px]'>
         <p className='text-center'>Your gateway to discovering a wealth of valuable information about our kindergarten school, Feel free to explore and learn more about the enriching experiences that await your child at our kindergarten school</p>
@@ -128,9 +131,48 @@ function Page() {
         </div>
         <div className='flex justify-center item-center relative gap-20 '> 
           <AboutPage/></div>
-       
-
-    </div>
+      
+          <Footer
+        logo={{
+          icon: '/icon6.png',
+          name: 'Little Learners',
+          description:
+            'We believe in the power of play to foster creativity, problem-solving skills, and imagination.',
+          emailIcon: '/icon7.png',
+          email: 'hello@littlelearners.com',
+          phoneIcon: '/icon8.png',
+          phone: '+91 91813 23 2309',
+          locationIcon: '/icon9.png',
+          location: 'Somewhere in the World',
+        }}
+        columns={[
+          {
+            title: 'Home',
+            links: ['Feature', 'Our Testimonials', 'FAQ'],
+          },
+          {
+            title: 'About Us',
+            links: [
+              'Our Mission',
+              'Our Vision',
+              'Awards and Recognitions',
+              'History',
+              'Teachers',
+            ],
+          },
+          {
+            title: 'Academics',
+            links: ['Special Features', 'Gallery'],
+          },
+          {
+            title: 'Contact Us',
+            links: ['Information', 'Map & Direction'],
+          },
+        ]}
+        socialIcons={['/icon10.png', '/icon11.png', '/icon12.png']}
+        copyright="© 2023 Little Learners Academy. All rights reserved."
+      />
+      </div>
   );
 }
 
