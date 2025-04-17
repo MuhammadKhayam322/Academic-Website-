@@ -49,7 +49,7 @@ const FAQSection = () => {
   return (
     <section className="relative py-12 ">
         <div className='flex justify-center items-center mb-10'>
-        <div className="border relative w-60 p-4 rounded-2xl">
+        <div className="border relative w-60 p-4 bg-white rounded-2xl">
             <h1>Solutions For The Doubts</h1>
         </div>
         </div>

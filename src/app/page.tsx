@@ -26,11 +26,11 @@ function Page() {
           />
         </div>
 
-      <nav className="w-full max-w-screen-mxl mt-4 flex flex-col md:flex-row items-center justify-between  border rounded shadow  ">
+      <nav className="w-full max-w-screen-mxl mt-4 flex flex-col bg-white md:flex-row items-center justify-between  border rounded shadow  ">
           <Link href="/">
             <Image src="/image.png" alt="logo" width={180} height={120} />
           </Link>
-          <ul className="flex flex-wrap justify-center md:justify-end  mt-4 md:mt-0">
+          <ul className="flex flex-wrap justify-center md:justify-end mt-4 md:mt-0">
             {[
               ['Home', '/'],
               ['About Us', '/about'],
@@ -39,7 +39,7 @@ function Page() {
               ['Student Life', '/student-life'],
               ['Contact', '/contact'],
             ].map(([text, link]) => (
-              <li key={link} className="px-4 py-5 border rounded">
+              <li key={link} className="px-4 py-5 border rounded hover:bg-orange-400 ">
                 <Link href={link}>{text}</Link>
               </li>
             ))}
@@ -94,7 +94,7 @@ function Page() {
 
         {/* Testimonial Section */}
         <div className="mt-20 text-center">
-          <div className="inline-block px-6 py-2 border-2 rounded-2xl mb-4 text-lg">
+          <div className="inline-block px-6 py-2 border-2 bg-white rounded-2xl mb-4 text-lg">
             Their Happy Words 🤗
           </div>
           <h1 className="text-4xl font-bold">Our Testimonials</h1>
@@ -112,7 +112,7 @@ function Page() {
         </div>
       </div>
       <div className='flex justify-center items-center mt-10'>
-      <div className='flex justify-center item-center relative w-[227px] h-[37px] py-2 border rounded-2xl'>
+      <div className='flex justify-center item-center bg-white relative w-[227px] h-[37px] py-2 border rounded-2xl'>
         <h1>Explore More</h1>
       </div>
     
