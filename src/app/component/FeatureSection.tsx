@@ -6,7 +6,7 @@ const features = [
     icon: '/icon.png',
     title: 'Holistic Learning Approach',
     description:
-      'Our curriculum focuses on nurturing cognitive, social,  ensuring a well-rounded education.',
+      'Our curriculum focuses on nurturing cognitive, social, ensuring a well-rounded education.',
   },
   {
     icon: '/icon1.png',
@@ -21,17 +21,15 @@ const features = [
       'We prioritize safety and provide a warm and caring atmosphere for every child.',
   },
   {
-    icon: '/icon3.png', // ← comma added here!
+    icon: '/icon3.png',
     title: 'Play-Based Learning',
     description:
       'We believe in the power of play to foster creativity, problem-solving skills, and imagination.',
   },
-  
   {
     icon: '/icon4.png',
     title: 'Individualized Attention',
-    description:
-      'Our small class sizes enable personalized attention, catering to each childs unique needs.',
+    description: "Our small class sizes enable personalized attention, catering to each child's unique needs.",
   },
   {
     icon: '/icon5.png',
@@ -39,8 +37,8 @@ const features = [
     description:
       'We foster a strong parent-school partnership to ensure seamless communication and collaboration.',
   },
- 
 ];
+
 
 const FeatureSection: React.FC = () => {
   return (

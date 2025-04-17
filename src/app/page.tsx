@@ -125,7 +125,10 @@ function Page() {
 
         <div className='flex justify-center item-center relative mt-10'>
         <div className='flex justify-center item-center  w-[820px] h-[200px]'>
-        <p className='text-center'>Your gateway to discovering a wealth of valuable information about our kindergarten school, Feel free to explore and learn more about the enriching experiences that await your child at our kindergarten school</p>
+        <p className='text-center'>
+  "Your gateway to discovering a wealth of valuable information about our kindergarten school. Feel free to explore and learn more about the enriching experiences that await your  childs future at our kindergarten school."
+</p>
+
         </div>
         </div>
         <div className='flex justify-center item-center relative gap-20 '> 
